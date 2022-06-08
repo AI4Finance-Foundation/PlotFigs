@@ -15,15 +15,15 @@ y_dji = dji['close'] / dji['close'][0] - 1
 x = dji['date']
 
 ax = plt.subplot(1,1,1)
-ax.plot(x, y_erl, color='red', linewidth=1, linestyle='--', )
-ax.plot(x, y_dji, color='green', linewidth=1, linestyle='--', )
+ax.plot(x, y_erl, color='red', linewidth=1, linestyle='-', )
+ax.plot(x, y_dji, color='green', linewidth=1, linestyle='-', )
 
 
 plt.title('', fontsize=20)
 plt.xlabel('Date', fontsize=20)
 plt.ylabel('Return', fontsize=20)
 
-plt.legend(labels=['ElegantRL agent', 'DJIA'], loc='best')
+plt.legend(labels=['PPO', 'DJIA'], loc='best')
 
 # set grid
 plt.grid()
@@ -33,12 +33,12 @@ ax.xaxis.set_major_locator(mdates.MonthLocator())  # interval = 1
 
 # # 配置横坐标
 # plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))
-plt.gca().xaxis.set_major_locator(mdates.MonthLocator())
+# plt.gca().xaxis.set_major_locator(mdates.MonthLocator())
 
-# #设置每隔多少距离⼀个刻度
-# plt.xticks(x[::30])
+#设置每隔多少距离⼀个刻度
+plt.xticks(x[::60])
 
-plt.gcf().autofmt_xdate()  # ⾃动旋转⽇期标记
+# plt.gcf().autofmt_xdate()  # ⾃动旋转⽇期标记
 
 
 # plt.setp(ax.get_xticklabels(), rotation=45, horizontalalignment='right')
