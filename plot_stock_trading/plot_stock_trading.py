@@ -15,8 +15,8 @@ y_dji = dji['close'] / dji['close'][0] - 1
 x = dji['date']
 
 ax = plt.subplot(1,1,1)
-ax.plot(x, y_erl, color='red', linewidth=1, linestyle='--', )
-ax.plot(x, y_dji, color='green', linewidth=1, linestyle='--', )
+ax.plot(x, y_erl, color='red', linewidth=1, linestyle='-', )
+ax.plot(x, y_dji, color='green', linewidth=1, linestyle='-', )
 
 
 plt.title('', fontsize=20)
