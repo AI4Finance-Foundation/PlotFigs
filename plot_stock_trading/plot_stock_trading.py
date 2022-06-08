@@ -23,7 +23,7 @@ plt.title('', fontsize=20)
 plt.xlabel('Date', fontsize=20)
 plt.ylabel('Return', fontsize=20)
 
-plt.legend(labels=['ElegantRL agent', 'DJIA'], loc='best')
+plt.legend(labels=['PPO', 'DJIA'], loc='best')
 
 # set grid
 plt.grid()
@@ -33,12 +33,12 @@ ax.xaxis.set_major_locator(mdates.MonthLocator())  # interval = 1
 
 # # 配置横坐标
 # plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))
-plt.gca().xaxis.set_major_locator(mdates.MonthLocator())
+# plt.gca().xaxis.set_major_locator(mdates.MonthLocator())
 
-# #设置每隔多少距离⼀个刻度
-# plt.xticks(x[::30])
+#设置每隔多少距离⼀个刻度
+plt.xticks(x[::60])
 
-plt.gcf().autofmt_xdate()  # ⾃动旋转⽇期标记
+# plt.gcf().autofmt_xdate()  # ⾃动旋转⽇期标记
 
 
 # plt.setp(ax.get_xticklabels(), rotation=45, horizontalalignment='right')
